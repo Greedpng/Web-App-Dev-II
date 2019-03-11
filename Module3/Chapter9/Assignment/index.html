@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+
+<meta charset="utf-8">
+
+<title>Book O Rama</title>
+
+<link href="styles/styles.css" rel="stylesheet" type="text/css">
+
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="scripts/carousel.js" defer></script>
+
+<style>
+    #carousel {
+        display: block;
+        margin-left: 250px;
+    }
+    #intro {
+    }
+    .button_panel	{
+        height: 100px;
+        padding: 50px 15px;
+        float: left;
+    }
+    .button_panel img {
+        width: 25px;
+        height: 25px;
+    }
+    #display_panel {
+        height: 420px;
+        width: 195px;
+        overflow: hidden;
+        float: left;
+    }
+    #image_list {
+        left: -40px;
+        position: relative;   
+        width: 800px;
+        list-style: none;  
+    }
+    #image_list li	{
+        float: left;
+        width: 200px;
+    }
+    #image_list li img	{
+        width: 195px;
+        
+    }
+</style>
+
+</head>
+
+<body>
+
+<a id="top"></a>
+
+<div id="wrapper">
+    <nav class="menu">
+        <ul>
+            <li>
+                <a href="#">Menu</a>
+                <ul>
+                    <li><a href="index.html" class="thispage">Home</a></li>
+                    <li><a href="pages/email.html">E-mail List</a></li>
+                    <li><a href="pages/magazines.html">Magazine Prices</a></li>
+                    <li><a href="pages/magazineList.html">Magazine List</a></li>
+                    <li><a href="pages/price.html">Price Calculator</a></li>
+                    <li><a href="pages/faq.html">FAQ</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <center><h1>Book O Rama</h1></center>
+
+    <div id="carousel">
+        <div id="left_button" class="button_panel"><img src="images/left.jpg" alt=""></div>
+        <div id="display_panel"> 
+            <ul id="image_list">
+                <li><a href="#"><img src="images/books/mrmercedes.jpg" alt="Mr. Mercedes - Stephen King"></a></li>
+                <li><a href="#"><img src="images/books/horridhenry.jpg" alt="Horrid Henry - Francesca Simon"></a></li>
+                <li><a href="#"><img src="images/books/worldofabstractart.jpg" alt="The World of Abstract Art - Emily Robbins"></a></li>
+                <li><a href="#"><img src="images/books/doubledown.jpg" alt="Diary of a Wimpy Kid: Double Down - Jeff Kinney"></a></li>
+            </ul>
+        </div>
+        <div id="right_button" class="button_panel"><img src="images/right.jpg" alt=""></div>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <div id="intro">
+        <p>Welcome to Book O Rama! We sell the greatest books and magazines online as well as in a storefront location.</p>
+
+        <p>Make sure you join our <a href="email.html">E-mail List</a> for updates!</p>
+    </div>
+</div> 
+
+</body>
+
+</html>

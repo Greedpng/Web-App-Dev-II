@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+
+<meta charset="utf-8">
+
+<title>Blog</title>
+
+<link href="main.css" rel="stylesheet" type="text/css">
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+</head>
+
+<body>
+
+<a id="top"></a>
+
+<div id="wrapper">
+    <nav class="menu">
+        <ul>
+            <li>
+                <a href="#">Menu</a>
+                <ul>
+                    <li><a href="index.html" class="thispage">Main Page</a></li>
+                    <li><a href="archive.html">Archive</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+	<center><h1>Blog Title</h1></center>
+	
+	<div>
+        <center><figure>
+            <video class="framedPhoto" height="340" controls>
+                <source src="kitty.mp4" type="video/mp4">
+            </video>
+			</figcaption>
+		</figure></center>
+        
+        <section id="post">
+            <header>
+                <h2>Cat Shenanigans</h2>
+            </header>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </section>
+
+		<section id="comments">
+                <header>
+                    <h4>Comments</h4>
+                </header>
+                <article>
+                    <header>
+                        <a href="#">Jeff Hurtz</a> on <time datetime="2009-06-29T23:35:20+01:00">June 29th 2009 at 23:35</time>
+                    </header>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+                </article>
+            </section>
+            <form action="#" method="post">
+                <h4>Post a comment</h4>
+                <p>
+                    <label for="name">Name</label>
+                    <input name="name" id="name" type="text" required />
+                </p>
+                <p>
+                    <label for="email">E-mail</label>
+                    <input name="email" id="email" type="email" required />
+                </p>
+                <p>
+                    <label for="website">Website</label>
+                    <input name="website" id="website" type="url" />
+                </p>
+                <p>
+                    <label for="comment">Comment</label>
+                    <textarea name="comment" id="comment" required></textarea>
+                </p>
+                <p><input type="submit" value="Post comment" /></p>
+            </form>
+    </div>
+</div> 
+<!--End of wrapper-->
+
+</body>
+
+</html>

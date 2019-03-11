@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+
+<meta charset="utf-8">
+
+<title>Sources</title>
+
+<link href="main.css" rel="stylesheet" type="text/css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+
+<script>
+	jQuery(document).ready(function() {
+		var offset = 220;
+		var duration = 500;
+		jQuery(window).scroll(function() {
+			if (jQuery(this).scrollTop() > offset) {
+				jQuery('.back-to-top').fadeIn(duration);
+			} else {
+				jQuery('.back-to-top').fadeOut(duration);
+			}
+		});
+    
+		jQuery('.back-to-top').click(function(event) {
+			event.preventDefault();
+			jQuery('html, body').animate({scrollTop: 0}, duration);
+			return false;
+		})
+	});
+</script>
+
+</head>
+
+<body>
+
+<a id="top"></a>
+
+<div id="wrapper">
+
+<!--Menu-->
+<nav class="menu">
+    <ul>
+        <li>
+			<a href="#">Menu</a>
+			<ul>
+				<li><a href="index.html">Main Page</a></li>
+				<li><a href="work.html">The Work</a></li>
+				<li><a href="salt.html">SALT</a></li>
+				<li><a href="art.html">Art</a></li>
+				<li><a href="sources.html" class="thispage">Sources</a></li>
+			</ul>
+		</li>
+     </ul>
+</nav>
+
+	<center><h1>Sources</h1></center>
+	
+	<nav id="cipherlist" class="linkEffect">
+	
+		<h2>Links:</h2>
+		
+		<ul>
+			<li><a href="https://thoughtcatalog.files.wordpress.com/2015/12/hires.jpg">Background</a></li>
+			<li><a href="http://gretchenhaien.com/gallery_incidentals.html">Gretchen Haien's Incidentals</a></li>
+			<li><a href="https://i.pinimg.com/originals/cd/e5/e5/cde5e5c07b857c630eab0b9279b0a887.png">Cyborg Picture (Yes, it's Long John Silver from Treasure Planet)</a></li>
+		</ul>
+		
+		<h3>Other Sources:</h3>
+		<ul>
+			<li>Past knowledge of HTML, CSS, and a sprinkle of JavaScript & jQuery</li>
+			<li>Pictures from my time at the Nashville Humane Association</li>
+			<li>Some random pictures I took in the past</li>
+			<li>
+			My big ol' stylesheet
+			<br>
+				<figure>
+					<img src="images/stylesheet.png" alt="stylesheet" height="500px" class="framedPhoto">
+				</figure>
+			</li>
+		</ul>
+	</nav>
+
+	<a href="#" class="back-to-top" style="display: inline;"><i class="fa fa-arrow-circle-up"></i><em>Top</em> <img src="images/upArrow.png" height="12px" width="12px"</a>
+	
+</div> 
+<!--End of wrapper-->
+
+</body>
+
+</html>

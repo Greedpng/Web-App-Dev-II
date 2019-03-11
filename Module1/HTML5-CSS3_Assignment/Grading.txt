@@ -1,0 +1,22 @@
+Browser: Google Chrome
+Features (All pages unless otherwise specified):
+- Borders
+- Background
+    + Fill Page
+- Text
+    + Text Shadow
+- Fonts 
+    + New Font
+    + Bold Font
+- Animations
+- Transitions
+    + Change Position
+    + Change Color
+- Columns (index.html)
+    + Multiple Columns
+    + Line Between Columns
+    + Specify Gap Between Columns
+- UI (index.html)
+    + Resizing 
+    + Box Sizing
+    + Outline Offset

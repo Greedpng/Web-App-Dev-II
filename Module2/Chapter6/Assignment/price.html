@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+
+<meta charset="utf-8">
+
+<title>Book O Rama</title>
+
+<link href="styles.css" rel="stylesheet" type="text/css">
+
+<script>
+    "use strict";
+        var $ = function(id) {
+            return document.getElementById(id);
+        };
+        var calculateTotal= function(price, amount) {
+			var total = (price * amount);
+			total = total.toFixed(2);
+			return total;
+		};
+		var processEntries = function() {
+            var price = parseFloat($("price").value);
+            var amount = parseFloat($("amount").value);
+
+            if (isNaN(price) || price <=0) {
+                alert("Price must be numeric and greater than zero");
+            } else if (isNaN(amount) || amount <= 0) {
+            	alert("Amount must be numeric and greater than zero");
+            } else {
+                $("total").value = calculateTotal(price, amount);
+                $("price").focus();
+            }
+        };
+        var clearEntries = function() {
+            document.getElementById("price").value = "";
+            document.getElementById("amount").value = "";
+            document.getElementById("total").value = "";
+        }
+		window.onload = function() {
+            $("calculate").onclick = processEntries;
+            $("clear").onclick = clearEntries;
+        };
+</script>
+
+</head>
+
+<body>
+
+<a id="top"></a>
+
+<div id="wrapper">
+    <nav class="menu">
+        <ul>
+            <li>
+                <a href="#">Menu</a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="email.html">E-mail List</a></li>
+                    <li><a href="magazines.html">Magazine List</a></li>
+                    <li><a href="price.html" class="thispage">Price Calculator</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <center><h1>Price Calculator</h1></center>
+
+    <label for="price">Price: $</label>
+    <input type="text" id="price"><br>
+    <label for="amount">Amount:</label>
+    <input type="text" id="amount"><br>
+    <label for="total">Total Cost: $</label>
+    <input type="text" id="total" disabled><br>
+    <label>&nbsp;</label>
+    <input type="button" id="calculate" value="Calculate">
+    <input type="button" id="clear" value="Clear"><br>
+    
+    <center><h6><a href="priceDebug.html">Debug</a></h6></center>
+</div> 
+
+</body>
+
+</html>

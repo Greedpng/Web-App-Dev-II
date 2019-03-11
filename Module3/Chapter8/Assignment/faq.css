@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+	width: 800px;
+	margin: 0 auto;
+}
+
+main {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 87.5%;
+    margin: 0 auto;
+    border: 3px solid blue;
+    padding: 15px 25px;
+}
+h1 { 
+    font-size: 150%;
+}
+h2 {
+    font-size: 120%;
+    padding: .25em 0 .25em 25px;
+    cursor: pointer;
+    background: url(images/plus.png) no-repeat left center;
+}
+h2.minus {
+    background: url(images/minus.png) no-repeat left center;
+}
+a {
+    color: black;
+    text-decoration: none; 
+}
+a:focus, a:hover { color: blue; }
+
+div {
+    display: none;
+}
+div.open {
+    display: block;
+}
+ul {
+    padding-left: 45px;
+}
+li {
+    padding-bottom: .25em;
+}
+p {
+    padding-bottom: .25em;
+    padding-left: 25px;
+}
+
+	/* Menu */
+	.menu ul {
+		zoom: 1;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		background: #333;
+	}
+
+	.menu ul:before,.menu ul:after {
+		content: "";
+		display: table;
+	}
+
+	.menu ul:after {
+		clear: both;
+	}
+
+	.menu ul > li {
+		float: left;
+		position: relative;
+		width: 100%;
+	}
+
+	.menu ul > li:hover ul {
+		max-height: 1000px;
+		-webkit-transform: perspective(400) rotate3d(0,0,0,0);
+	}
+
+	.menu a {
+		display: block;
+		padding: 10px 20px;
+		line-height: 20px;
+		color: #fff;
+		border-left: 1px solid #595959;
+		text-decoration: none;
+		transition-duration: 0.4s;
+	}
+
+	.menu a:hover {
+		text-decoration: none;
+		background: #595959;
+		transition-duration: 0.4s;
+	}
+
+	.menu a:active, a.thispage {
+		background-color: #595999;
+	}
+
+	.menu li ul {
+		position: absolute;
+		left: 0;
+		top: 39px;
+		z-index: 1;
+		max-height: 0;
+		overflow: hidden;
+		-webkit-transform: perspective(400) rotate3d(1,0,0,-90deg);
+		-webkit-transform-origin: 50% 0;
+		-webkit-transition: 350ms;
+		-moz-transition: 350ms;
+		-o-transition: 350ms;
+		transition: 350ms;
+	}
+
+	.menu li ul li {
+		width: 800px;
+	}
+
+	.menu li ul a {
+		border: none;
+	}
+
+	.menu li ul a:hover {
+		background: rgba(0,0,0,0.2);
+	}
+	/* End Menu */

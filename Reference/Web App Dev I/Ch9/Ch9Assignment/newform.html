@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>NewForm</title>
+        <meta charset="utf-8"> 
+        <style>
+            form { 
+                background-color:#eaeaea;
+                font-family: Arial, sans-serif;
+                padding: 10px; 
+                width: 400px;
+            }
+            label { 
+                float: left;
+                width: 150px; 
+                clear: left;
+                text-align: right; 
+                padding-right: 10px;
+                margin-top: 10px; 
+            }
+            input, textarea { 
+                margin-top: 10px; 
+                display: block; } 
+            #mySubmit { 
+                margin-left: 160px; 
+            }
+        </style>
+    </head>
+    <body>
+        
+        <form method="post" action="http://webdevbasics.net/scripts/demo.php">
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" required="required">
+            
+            <fieldset>
+                <legend>Favorite Weekday</legend>
+                <input type="radio" name="weekday" value="sunday"> Sunday<br>
+                <input type="radio" name="weekday" value="monday"> Monday<br>
+                <input type="radio" name="weekday" value="tuesday"> Tuesday<br>
+                <input type="radio" name="weekday" value="wednesday"> Wednesday<br>
+                <input type="radio" name="weekday" value="thursday"> Thursday<br>
+                <input type="radio" name="weekday" value="friday"> Friday<br>
+                <input type="radio" name="weekday" value="saturday"> Saturday<br>
+            </fieldset>
+
+            <br>
+
+            <select size="1" name="favsocialmedia" id="favsocialmedia">
+                    <option>Select your favorite social media website</option>
+                    <option value="Facebook">Facebook</option>
+                    <option value="Instagram">Instagram</option>
+                    <option value="Twitter">Twitter</option>
+            </select>
+
+            <br><br>
+
+            <fieldset>
+                <legend>Shipping Address</legend>
+                <label for="addressLine1">Address 1: </label>
+                <input type="text" name="addressLine1" id="addressLine1">
+
+                <label for="addressLine2">Address 2:</label>
+                <input type="text" name="addressLine2" id="addressLine2">
+
+                <label for="city">City:</label>
+                <input type="text" name="city" id="city">
+
+                <label for="state">State:</label>
+                <input type="text" name="state" id="state">
+
+                <label for="zip">Zip:</label>
+                <input type="text" name="zip" id="zip">
+            </fieldset>
+
+            <br>
+
+            <input type="image" src="signup.gif" alt="Sign Up">
+
+            <br>
+
+            <input id="userId" name="userId" type="hidden">
+        </form>
+    </body>
+</html>

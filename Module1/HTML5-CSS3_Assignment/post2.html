@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+
+<meta charset="utf-8">
+
+<title>Blog</title>
+
+<link href="main.css" rel="stylesheet" type="text/css">
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+
+<style>
+    body {
+    font-family: 'Inconsolata', serif;
+    font-size: 48px;
+    }
+</style>
+
+</head>
+
+<body>
+
+<a id="top"></a>
+
+<div id="wrapper">
+    <nav class="menu">
+        <ul>
+            <li>
+                <a href="#">Menu</a>
+                <ul>
+                    <li><a href="index.html" class="thispage">Main Page</a></li>
+                    <li><a href="archive.html">Archive</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+	<center><h1>Blog Title</h1></center>
+	
+	<div>
+        
+        <section id="post">
+            <header>
+                <h2>Walk in the Park</h2>
+            </header>
+            <p>I took a walk in the park today. It was nice outside an very relaxing.</p>
+        </section>
+
+		<section id="comments">
+                <header>
+                    <h4>Comments</h4>
+                </header>
+                <article>
+                    <header>
+                        <a href="#">Jeff Hurtz</a> on <time datetime="2009-05-18T22:35:20+01:00">May 18th 2009 at 23:35</time>
+                    </header>
+                    <p>Sounds like a good time.</p>
+                </article>
+            </section>
+            <form action="#" method="post">
+                <h4>Post a comment</h4>
+                <p>
+                    <label for="name">Name</label>
+                    <input name="name" id="name" type="text" required />
+                </p>
+                <p>
+                    <label for="email">E-mail</label>
+                    <input name="email" id="email" type="email" required />
+                </p>
+                <p>
+                    <label for="website">Website</label>
+                    <input name="website" id="website" type="url" />
+                </p>
+                <p>
+                    <label for="comment">Comment</label>
+                    <textarea name="comment" id="comment" required></textarea>
+                </p>
+                <p><input type="submit" value="Post comment" /></p>
+            </form>
+
+            <a href="index.html"><-- Previous Post</a>
+    </div>
+</div> 
+<!--End of wrapper-->
+
+</body>
+
+</html>

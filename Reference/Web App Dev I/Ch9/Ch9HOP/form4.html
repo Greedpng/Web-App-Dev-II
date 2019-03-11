@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Contact Form</title>
+        <meta charset="utf-8">
+
+        <style>
+            fieldset { 
+                width: 320px;
+                border: 2px ridge #ff0000;
+                padding: 10px;
+                margin-bottom: 10px; 
+            }
+            legend { 
+                font-family: Georgia, "Times New Roman", serif;
+                font-weight: bold; 
+            }
+            label { 
+                font-family: Arial, sans-serif; 
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Join Our Newsletter</h1>
+        
+        <form method="get">
+            <fieldset>
+                <legend>Customer Information</legend>
+
+                First Name: <input type="text" name="fname" id="fname">
+                <br><br>
+                Last Name: <input type="text" name="lname" id="lname">
+                <br><br>
+                E-mail: <input type="text" name="email" id="email">
+                <br><br>
+            </fieldset>
+
+            Comments:<br>
+            <textarea name="comments" id="comments" rows="4" cols="40"></textarea>
+            <br><br>
+            <input type="submit" value="Contact"> <input type="reset">
+        </form>
+    </body>
+</html>

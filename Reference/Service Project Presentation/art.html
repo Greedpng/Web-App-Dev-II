@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+
+<meta charset="utf-8">
+
+<title>Art</title>
+
+<link href="main.css" rel="stylesheet" type="text/css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+
+<script>
+	jQuery(document).ready(function() {
+		var offset = 220;
+		var duration = 500;
+		jQuery(window).scroll(function() {
+			if (jQuery(this).scrollTop() > offset) {
+				jQuery('.back-to-top').fadeIn(duration);
+			} else {
+				jQuery('.back-to-top').fadeOut(duration);
+			}
+		});
+    
+		jQuery('.back-to-top').click(function(event) {
+			event.preventDefault();
+			jQuery('html, body').animate({scrollTop: 0}, duration);
+			return false;
+		})
+	});
+</script>
+
+</head>
+
+<body>
+
+<a id="top"></a>
+
+<div id="wrapper">
+
+<!--Menu-->
+<nav class="menu">
+    <ul>
+        <li>
+			<a href="#">Menu</a>
+			<ul>
+				<li><a href="index.html">Main Page</a></li>
+				<li><a href="work.html">The Work</a></li>
+				<li><a href="salt.html">SALT</a></li>
+				<li><a href="art.html"  class="thispage">Art</a></li>
+				<li><a href="sources.html">Sources</a></li>
+			</ul>
+		</li>
+     </ul>
+</nav>
+
+	<center><h1>Gretchen Haien - Incidentals</h1></center>
+	
+	<div style="height: 3050px">
+		<figure class="floatLeft">
+			<img src="images/Incidentals/Incidentals002.jpg" alt="" class="framedPhoto">
+			<br>
+		</figure>
+		
+		<br><br><br><br>
+		
+		<figure class="floatRight">
+			<img src="images/Incidentals/Incidentals027.jpg" alt="013" class="framedPhoto">
+			<br>
+		</figure>
+		
+		<figure class="floatLeft">
+			<img src="images/Incidentals/Incidentals029.jpg" alt="" class="framedPhoto">
+			<br>
+		</figure>
+		
+		<figure class="floatRight">
+			<img src="images/Incidentals/Incidentals039.jpg" alt="" class="framedPhoto">
+			<br>
+		</figure>
+		
+		<figure class="floatLeft">
+			<img src="images/Incidentals/Incidentals049.jpg" alt="" class="framedPhoto">
+			<br>
+		</figure>
+		
+		<figure class="floatRight">
+			<img src="images/Incidentals/Incidentals050.jpg" alt="" class="framedPhoto">
+			<br>
+		</figure>
+		
+		<figure class="floatLeft">
+			<img src="images/Incidentals/Incidentals021.jpg" alt="" class="framedPhoto">
+			<br>
+		</figure>
+		
+		<figure class="floatRight">
+			<img src="images/Incidentals/Incidentals030.jpg" alt="" class="framedPhoto">
+			<br>
+		</figure>
+		
+		<figure class="floatLeft">
+			<img src="images/Incidentals/Incidentals019.jpg" alt="" class="framedPhoto">
+			<br>
+		</figure>
+		
+		<figure class="floatRight">
+			<img src="images/Incidentals/Incidentals043.jpg" alt="" class="framedPhoto">
+			<br>
+		</figure>
+		
+		<figure class="floatRight">
+			<img src="images/Incidentals/Incidentals013.jpg" alt="" class="framedPhoto">
+		</figure>
+				
+		<figure class="centered">
+			<img src="images/Incidentals/Incidentals037.jpg" alt="" class="framedPhoto">
+			<br>
+		</figure>
+	</div>
+	
+	<nav id="cipherlist" class="linkEffect">		
+		<a href="art2.html" style="margin-left: auto; margin-right: auto;">My Photos</a>
+	</nav>
+
+	<a href="#" class="back-to-top" style="display: inline;"><i class="fa fa-arrow-circle-up"></i><em>Top</em> <img src="images/upArrow.png" height="12px" width="12px"</a>
+</div> 
+<!--End of wrapper-->
+
+</body>
+
+</html>

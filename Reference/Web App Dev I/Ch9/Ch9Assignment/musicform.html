@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>NewForm</title>
+        <meta charset="utf-8"> 
+        <style>
+            form { 
+                background-color:#eaeaea;
+                font-family: Arial, sans-serif;
+                padding: 10px; 
+                width: 500px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            label { 
+                float: left;
+                clear: left;
+                text-align: right; 
+                padding-right: 10px;
+                margin-top: 10px; 
+            }
+            input, textarea { 
+                margin-top: 10px; 
+                display: block; } 
+            #mySubmit { 
+                margin-left: 160px; 
+            }
+        </style>
+    </head>
+    <body>
+        
+        <form method="post" action="http://webdevbasics.net/scripts/demo.php">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" required="required">
+
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email" required="required">
+
+
+            <label for="date">Date:</label>
+            <input type="date" name="date" id="date" required="required">
+
+            <br>
+            
+            <fieldset>
+                <legend>Select Your Favorite Types of Music</legend>
+                <input type="checkbox" name="type" value="pop"> Pop<br>
+                <input type="checkbox" name="type" value="classical"> Classical<br>
+                <input type="checkbox" name="type" value="rock"> Rock<br>
+                <input type="checkbox" name="type" value="folk"> Folk<br>
+                <input type="checkbox" name="type" value="rap"> Rap<br>
+                <input type="checkbox" name="type" value="country"> Country<br>
+                <input type="checkbox" name="type" value="other"> Other<br>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>Select how often you purchase Music CDs:</legend>
+                <input type="radio" name="cds" value=""> Weekly<br>
+                <input type="radio" name="cds" value=""> A few CDs each year<br>
+                <input type="radio" name="cds" value=""> Monthly<br>
+                <input type="radio" name="cds" value=""> Never Purchase<br>
+            </fieldset>
+
+            <br>
+
+            Select the locations you listen to music:
+            <select size="1" name="favsocialmedia" id="favsocialmedia">
+                    <option value="home">At home</option>
+                    <option value="car">In the car</option>
+                    <option value="anywhere">Anywhere (MP3 Player)</option>
+            </select>
+
+
+            <br>
+
+            What role does music play in your life?
+            <textarea name="comments" id="comments" rows="3" cols="60"></textarea>
+
+            <input type="submit" value="Submit"> <input type="reset">
+        </form>
+    </body>
+</html>
