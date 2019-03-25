@@ -12,6 +12,27 @@
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
+<script>
+	$(document).ready(function() {
+		var getDate = function() {
+			var currentDate = new Date();
+			
+			var month = currentDate.getMonth() + 1;
+			if (month < 10) {
+				month = "0" + month;
+			}
+			var day = currentDate.getDate();
+			if (day < 10) {
+				day = "0" + day;
+			}
+			var year = currentDate.getFullYear();
+			var dateString = month + "/" + day + "/" + year;
+			return dateString;
+		};
+	    $("#date").text(getDate());	
+	});
+</script>
+
 </head>
 
 <body>
@@ -46,6 +67,8 @@
 		</li>
 	</ul>
 </nav>
+	
+	<center><h4>Today's date: <span id="date">&nbsp;</span></h4></center>
 
 	<center><h1>Conner Guidry</h1></center>
 	
@@ -56,9 +79,6 @@
 	</center>	
 
 	<center><p>I am Conner Guidry, a web development student and amateur photographer!</p></center>
-
-	<a href="#" class="back-to-top" style="display: inline;"><i class="fa fa-arrow-circle-up"></i><em>Top</em> <img src="images/upArrow.png" height="12px" width="12px"></a>
-	
 </div> 
 <!--End of wrapper-->
 
