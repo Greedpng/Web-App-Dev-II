@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+
+<meta charset="utf-8">
+
+<title>Book O Rama</title>
+
+<link href="../styles/styles.css" rel="stylesheet" type="text/css">
+<link href="../styles/lightbox.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+<script src="../scripts/lightbox.js"></script>
+
+<script>
+    "use strict";
+    $( document ).ready(function() {
+            var event = "Big Sale";
+            var dt = "10/22/2019";  
+            var message = $("#message");   
+
+            // make sure task and due date are entered
+            if (event.length == 0 || dt.length == 0) {
+                message.text( "Please enter both a name and a date." );
+                return;
+            }  
+            // make sure due date string has slashes and a 4-digit year
+            if (dt.indexOf("/") == -1) { 
+                message.text( "Please enter the date in MM/DD/YYYY format." );
+                return;
+            } 
+            var year = dt.substring(dt.length - 4); 
+            if (isNaN(year)) {
+                message.text( "Please enter the date in MM/DD/YYYY format." );
+                return;
+            }     
+            // convert due date string to Date object and check for validity
+            var date = new Date(dt);
+            if (date == "Invalid Date") {
+                message.text( "Please enter the date in MM/DD/YYYY format." );
+                return;
+            }
+
+            // calculate days
+            var today = new Date();
+            var oneDay = 24*60*60*1000; // hours * minutes * seconds * milliseconds    
+            var days = ( date.getTime() - today.getTime() ) / oneDay;
+            days = Math.ceil(days);
+
+            // create and display message 
+            if (days == 0) {
+                message.text( "Hooray! Today is ".concat(event.toLowerCase(), 
+                    "!\n(", date.toDateString(), ")") );
+            }
+            if (days < 0) {
+                // capitalize event
+                event = event.substring(0,1).toUpperCase() + event.substring(1); 
+                message.text( event.concat(" happened ", Math.abs(days), 
+                    " day(s) ago. \n (", date.toDateString(), ")") );       
+            }
+            if (days > 0) {
+                message.text( days.toString().concat(" day(s) until ", 
+                    event.toLowerCase(), "!\n(", date.toDateString(), ")") );
+            }
+        
+        $("#event").focus();
+    });
+</script>
+
+</head>
+
+<body>
+
+<a id="top"></a>
+
+<div id="wrapper">
+    <nav class="menu">
+        <ul>
+            <li>
+                <a href="#">Menu</a>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="bigEvent.html" class="thispage">Next Big Event</a></li>
+                    <li><a href="email.html">E-mail List</a></li>
+                    <li><a href="magazines.html">Magazine Prices</a></li>
+                    <li><a href="magazineList.html">Magazine List</a></li>
+                    <li><a href="magazineFlickr.html">TIME Flickr Feed</a></li>
+                    <li><a href="price.html">Price Calculator</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <center><h1>Next Big Event</h1></center>
+
+    <div id="intro">
+        <h2><p>We have a big sale coming up on October 22nd!</p></h2>
+
+        <main>
+            <p id="message">&nbsp;</p>
+        </main> 
+    </div>
+</div> 
+
+</body>
+
+</html>

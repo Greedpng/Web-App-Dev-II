@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+
+<meta charset="utf-8">
+
+<title>Book O Rama</title>
+
+<link href="styles/styles.css" rel="stylesheet" type="text/css">
+<link href="styles/lightbox.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+<script src="scripts/lightbox.js"></script>
+<script src="scripts/task_list.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $("#slider").bxSlider({
+            auto: true,
+            autoControls: true,
+            captions: true,
+            minSlides: 1,
+            maxSlides: 1,
+            slideWidth: 300,
+            slideMargin: 10
+        })
+    });
+</script>
+
+</head>
+
+<body>
+
+<a id="top"></a>
+
+<div id="wrapper">
+    <nav class="menu">
+        <ul>
+            <li>
+                <a href="#">Menu</a>
+                <ul>
+                    <li><a href="index.html" class="thispage">Home</a></li>
+                    <li><a href="pages/bigEvent.html">Next Big Event</a></li>
+                    <li><a href="pages/email.html">E-mail List</a></li>
+                    <li><a href="pages/magazines.html">Magazine Prices</a></li>
+                    <li><a href="pages/magazineList.html">Magazine List</a></li>
+                    <li><a href="pages/magazineFlickr.html">TIME Flickr Feed</a></li>
+                    <li><a href="pages/price.html">Price Calculator</a></li>
+                    <li><a href="pages/faq.html">FAQ</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <center><h1>Book O Rama</h1></center>
+
+    <div class="image-row">
+        <center>
+            <ul id="slider" class="image-set">
+                <li><a href="images/books/mrmercedes.jpg" data-lightbox="example-set" data-title="Mr. Mercedes - Stephen King"><img class="example-image" src="images/books/mrmercedes.jpg" alt="Mr. Mercedes - Stephen King"></a></li>
+                <li><a href="images/books/horridhenry.jpg" data-lightbox="example-set" data-title="Horrid Henry - Francesca Simon"><img class="example-image" src="images/books/horridhenry.jpg" alt="Horrid Henry - Francesca Simon"></a></li>
+                <li><a href="images/books/worldofabstractart.jpg" data-lightbox="example-set" data-title="The World of Abstract Art - Emily Robbins"><img class="example-image" src="images/books/worldofabstractart.jpg" alt="The World of Abstract Art - Emily Robbins"></a></li>
+                <li><a href="images/books/doubledown.jpg" data-lightbox="example-set" data-title="Diary of a Wimpy Kid: Double Down - Jeff Kinney"><img class="example-image" src="images/books/doubledown.jpg" alt="Diary of a Wimpy Kid: Double Down - Jeff Kinney"></a></li>
+            </ul>
+        </center>
+    </div>
+
+    <div id="intro">
+        <p>Welcome to Book O Rama! We sell the greatest books and magazines online as well as in a storefront location.</p>
+
+        <p>Make sure you join our <a href="email.html">E-mail List</a> for updates!</p>
+    </div>
+
+    <main id="tasklist">
+        <center><h1>Task List</h1></center>
+        <div id="tasks">
+            <label for="task_list">Task List</label><br>
+            <textarea id="task_list" rows="11" cols="50" disabled></textarea>
+        </div>
+
+        <label for="task">Task</label><br>
+        <input type="text" name="task" id="task"><br>
+
+        <label for="due_date">Due Date</label><br>
+        <input type="text" name="due_date" id="due_date"><br>
+
+        <input type="button" name="add_task" id="add_task" value="Add Task"><br>
+        <input type="button" name="clear_tasks" id="clear_tasks" value="Clear Tasks"><br>
+        <input type="button" name="filter" id="filter" value="Filter">
+    </main>
+</div> 
+
+</body>
+
+</html>
