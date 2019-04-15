@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+
+<meta charset="utf-8">
+
+<title>Test 2</title>
+
+<link href="styles.css" rel="stylesheet" type="text/css">
+
+<script src="scripts.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        var url = "http://api.flickr.com/services/feeds/photos_public.gne?" +
+                  "format=json&jsoncallback=?&tags=time_magazine";
+
+        $.getJSON(url, function(data){
+            var html = "";
+            $.each(data.items, function(i, item){
+                html += "<h2>" + item.title + "</h2>";  
+                html += "<p>" + item.date_taken + "</p><br>";
+                html += item.description;
+            });
+            $("#photos").html(html);
+        });          
+    });
+</script>
+
+</head>
+
+<body>
+    <nav class="menu">
+        <ul>
+            <li>
+                <a href="#">Menu</a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="carousel.html">Carousel</a></li>
+                    <li><a href="flickrFeed.html" class="thispage">FlickrFeed</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <center><h1>FlickrFeed</h1></center><br>
+
+    <style>
+        aside {
+            margin: 50px 0 10px 0;
+            width: 175px;
+            float: right;
+        }
+        main {
+            display: block;
+            margin-right: 25px;
+        }
+        #categories h1 { 
+            font-size: 150%;
+        }
+        #categories h2 {
+            font-size: 120%;
+            padding: .25em 0 .25em 25px;
+            cursor: pointer;
+            background: url(../images/plus.png) no-repeat left center;
+        }
+        #categories h2.minus {
+            background: url(../images/minus.png) no-repeat left center;
+        }
+        #categories div {
+            display: none;
+        }
+        #categories div.open {
+            display: block;
+        }
+        #categories ul {
+            padding-left: 45px;
+        }
+        #categories li {
+            padding-bottom: .25em;
+        }
+    </style>
+
+    <div id="photos"></div>
+
+</body>
+
+</html>

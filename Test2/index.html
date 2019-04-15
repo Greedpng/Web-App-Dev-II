@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+
+<meta charset="utf-8">
+
+<title>Test 2</title>
+
+<link href="styles.css" rel="stylesheet" type="text/css">
+
+<style>
+div {
+    display: none;
+}
+
+div.open {
+    display: block;
+}
+</style>
+
+<script src="scripts.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="math.js"></script>
+
+<script>
+    "use strict";
+    $(document).ready(function() {
+        $("#image_rollovers img").each(function() {
+            var oldURL = $(this).attr("src");      // gets the src attribute
+            var newURL = $(this).attr("id");       // gets the id attribute
+
+            // preload rollover image       
+            var rolloverImage = new Image();
+            rolloverImage.src = newURL;
+
+            $(this).mouseover(function() {
+                $(this).attr("src", newURL);
+            });
+
+            $(this).mouseout(function() {
+                $(this).attr("src", oldURL);
+            });
+        }); // end each
+    }); // end ready
+</script>
+
+</head>
+
+<body>
+    <nav class="menu">
+        <ul>
+            <li>
+                <a href="#">Menu</a>
+                <ul>
+                    <li><a href="index.html" class="thispage">Home</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="carousel.html">Carousel</a></li>
+                    <li><a href="flickrFeed.html">FlickrFeed</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <center><h1>Test 2</h1></center><br>
+
+    <a id="image_rollovers"><img width="400px" src="images/Slideshow/IMG_0426.png" alt="" id="images/Slideshow/IMG_0420.png"></a>
+
+    <br><br>
+
+    <center><h1>FAQ</h1></center>
+    <main id="faqs">
+        <h2><a href="#" class="plus">Where were the pictures taken?</a></h2>
+            <div class="closed">
+                <p>Around Brentwood, Tennessee.</p>
+            </div>
+        <h2><a href="#" class="plus">What camera did you use?</a></h2>
+            <div class="closed">
+                <p>I used a D7500 with the kit lens.</p>
+            </div>
+    </main>
+
+    <hr>
+    
+    <p id="date">&nbsp;</p>  
+
+    <script>
+        var getDate = function() {
+            var currentDate = new Date();
+            
+            var month = currentDate.getMonth() + 1;
+            if (month < 10) {
+                month = "0" + month;
+            }
+            var day = currentDate.getDate();
+            if (day < 10) {
+                day = "0" + day;
+            }
+            var year = currentDate.getFullYear();
+            var dateString = "Today is " + month + "/" + day + "/" + year + " at ";
+            
+            var hours = currentDate.getHours();
+            var minutes = currentDate.getMinutes();
+            if (minutes < 10) {
+                minutes = "0" + minutes; // pad minutes
+            }
+            var dateString = "Today is " + month + "/" + day + "/" + year;
+            dateString += " at " + hours + ":" + minutes + "."; 
+            return dateString;
+        };
+    $("#date").text(getDate()); 
+    </script>
+
+    <input type="button" id="numbutton" value="Generate Number" />
+
+</body>
+
+</html>
