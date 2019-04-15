@@ -57,7 +57,7 @@ var tasklist = (function() {
         }
     };
     
-})();
+});
 
 //var tasklist = {
 //    tasks: [],
